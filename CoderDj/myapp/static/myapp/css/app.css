@@ -1,0 +1,33 @@
+body {
+    background-color: Silver;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container-fluid {
+    padding: 0; /* Убираем отступы контейнера */
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.img-fluid {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.content-wrapper {
+    padding: 15px; /* Добавляем отступы для текста */
+    margin-left:20x; /* Добавляем небольшой отступ слева для красоты */
+    background-color: #fff; /* Можно добавить фон, чтобы выделить текстовый блок */
+    border-radius: 5px; /* Радиус закругления углов для эстетики */
+}

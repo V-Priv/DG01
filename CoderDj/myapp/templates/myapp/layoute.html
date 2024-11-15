@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'myapp/css/app.css' %}">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div class="container-fluid mt-3">
+        <div class="d-flex align-items-center">
+            <nav class="flex-grow-1" style="height: 150px;">
+                {% include 'myapp/nav.html' %}
+            </nav>
+        </div>
+    </div>
+
+     <main class="container-fluid flex-grow-1 d-flex">
+        <div class="w-100">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    {% include 'myapp/footer.html' %}
+
+    <!-- Подключение Bootstrap JS и jQuery (необязательно, только если планируете использовать JS компоненты Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

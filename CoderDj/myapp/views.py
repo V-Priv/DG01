@@ -1,11 +1,14 @@
 from django.http import HttpResponse
-
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("<h1>Это главная страница</h1>")
+    return render(request, "myapp/index.html")
 
-def data(request):
-    return HttpResponse("<h1>Это страничка с данными</h1>")
+def page2(request):
+    return render(request,"myapp/page2.html")
 
-def test(request):
-    return HttpResponse("<h1> Здесь расположены тесты</h1>")
+def page3(request):
+    return render(request, "myapp/page3.html")
+
+def page4(request):
+    return render(request, "myapp/page4.html")
